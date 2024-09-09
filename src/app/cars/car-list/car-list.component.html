@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Car List</h1>
+    <ul class="car-list">
+      <li *ngFor="let car of cars" class="car-item">
+        <p class="car-details">
+          <strong>Model:</strong> {{ car.model }} <br>
+          <strong>Condition:</strong> {{ car.state }}<br>
+          <strong>Price per hour:</strong> ${{ car.price }}
+        </p>
+        <button class="details-button" (click)="selectCar(car.id)">Details</button>
+      </li>
+    </ul>
+  </div>
